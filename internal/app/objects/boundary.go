@@ -1,4 +1,4 @@
-package main
+package objects
 
 import (
 	"image/color"
@@ -8,18 +8,18 @@ import (
 )
 
 type Boundary struct {
-	x1, y1, x2, y2 float64
+	X1, Y1, X2, Y2 float64
 }
 
 func NewBoundary(x1, y1, x2, y2 float64) *Boundary {
 	return &Boundary{
-		x1: x1,
-		y1: y1,
-		x2: x2,
-		y2: y2,
+		X1: x1,
+		Y1: y1,
+		X2: x2,
+		Y2: y2,
 	}
 }
 
 func (b *Boundary) Show(screen *ebiten.Image) {
-	ebitenutil.DrawLine(screen, b.x1, b.y1, b.x2, b.y2, color.White)
+	ebitenutil.DrawLine(screen, b.X1, b.Y1, b.X2, b.Y2, color.White)
 }

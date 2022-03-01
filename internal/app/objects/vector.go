@@ -1,14 +1,14 @@
-package main
+package objects
 
 import "math"
 
 type Vector struct {
-	x, y float64
+	X, Y float64
 }
 
 func VectorFromAngle(angle float64) *Vector {
 	return &Vector{
-		x: math.Cos(angle),
-		y: math.Sin(angle),
+		X: math.Cos(angle),
+		Y: math.Sin(angle),
 	}
 }

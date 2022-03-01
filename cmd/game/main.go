@@ -1,6 +1,8 @@
 package main
 
 import (
+	"ray-casting/internal/app"
+
 	"github.com/hajimehoshi/ebiten/v2"
 )
 
@@ -13,7 +15,7 @@ func main() {
 	ebiten.SetWindowSize(screenWidth, screenHeight)
 	ebiten.SetWindowTitle("Ray casting")
 
-	g := NewGame()
+	g := app.NewGame(screenWidth, screenHeight)
 	if err := ebiten.RunGame(g); err != nil {
 		panic(err)
 	}
